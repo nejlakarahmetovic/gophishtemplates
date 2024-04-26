@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spring Fling Launch Event</title>
+
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .header img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .content {
+    padding: 20px 0;
+  }
+  h1 {
+    color: #007BFF;
+  }
+  .button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+</style>
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <!-- image below is the one shown at the top of the email, adjust accordingly -->
+    <img src="https://i.imgur.com/L4hBEz5.jpg" alt="Spring Fling Launch Event" style="max-height: 100px; max-width: 100%; margin-bottom: -35px;">
+  </div>
+  <div class="content">
+    <h1 style="text-align: center;">Spring Fling Launch Event</h1>
+    <!-- {{.FirstName}} will import from GoPhish and take the user profile's first name, so it will change per user -->
+    <p>{{.FirstName}}, join us at [Company Name] for our annual Spring Fling Launch Event! Discover the latest innovations in technology and get a sneak peek at our upcoming products.</p>
+    <!-- You can adjust the dates and times as needed & be sure to update the company name and address when deploying the template -->
+    <p>Date: April 15, 2024<br>
+    Time: 6:00 PM - 9:00 PM<br>
+    Location: [Company Name], [Company Street Address], [City], [State]</p>
+    <p>Refreshments and entertainment will be provided. Don't miss this exciting opportunity to network with industry leaders and the [Company Name] team.</p>
+    <div style="text-align: center;">
+    <!-- {{.URL}} is required by GoPhish to automatically redirect it to the selected landing page when creating the campaign -->
+    <a href="{{.URL}}" class="button">Register Now</a>
+    </div>
+  </div>
+  <div class="footer">
+    <p>For more information, visit our website or contact us at events@knd.com.</p>
+  </div>
+</div>
+</body>
+</html>
