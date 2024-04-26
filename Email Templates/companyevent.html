@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .content {
+        padding: 20px;
+        text-align: left;
+        color: #333333;
+    }
+    .footer {
+        background-color: #444444;
+        color: #cccccc;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    a {
+        color: #008cba;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #444444;
+        color: #ffffff;
+        padding: 5px 10px;
+        margin: 20px 0;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://i.imgur.com/MdtUGUP.png">
+    </div>
+    <div class="content">
+        <h2>Hi {{.FirstName}},</h2>
+        <p>Regarding our Spring Fling launch, we Have Made some Changes to the meeting this friday. Can u sign into the portal to confirm your attendance?</p>
+        <p>Please fwd this to anyone else you may know interested in attending the launch event!</p>
+        <div style="text-align: center;">
+        <a href="{{.URL}}" class="btn">Confirm Attendance</a>
+        </div>
+        <p>At KDN, we pride ourselves on delivering cutting-edge technology solutions that drive innovation and efficiency. Our team is dedicated to providing you with the highest level of service and support.</p>
+        <p>If you have any questions or need further information, please feel free to contact us at <a href="mailto:support@knd.com">support@[company name].com</a>.</p>
+        <p>Best Regards,</p>
+        <p>Fiona Gallagher</p>
+        <p style="color: #888888; margin-top: -15px;">VP of Markting | KND</p>
+        <img src="https://i.imgur.com/dBVGXHQ.png" style="max-width: 85px; max-height: 50px;">
+    </div>
+    <div class="footer">
+        &copy; 2024 [Company Name]. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

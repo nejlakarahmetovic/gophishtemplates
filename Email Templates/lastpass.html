@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+
+</html>
+
+<head>
+<title>LastPass</title>
+<link href="pass.css" rel="stylesheet">
+
+
+<style>
+    h1{
+        text-align: center;
+    }
+    h1 img{
+        max-width: 30%;
+        padding: 0% 0% 2% 0%;
+    }
+    main{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight:500;
+    }
+    #redhead{
+        display: flex;
+        flex-direction: column;
+        height: 10px; 
+        background-color: #C80815;
+        text-align: center; 
+    
+    }
+    #wrapper {
+        max-width: 80%;
+        margin: auto;
+        text-align: left;
+    }
+    footer {
+        background-color: black;
+        color: #ffffff;
+        margin-top: 2%;
+        text-align: center;
+        padding: 0.5%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    footer p:first-child{
+        margin-bottom: 0;
+    }
+    footer p:last-child{
+        margin-top: 0;
+    }
+    .btn{
+    display: block; /* Makes sure the input behaves like a block-level element */
+    margin: 20px auto; /* Adds margin to the top and bottom, and auto margin to the sides */
+    border: none;
+    background-color: #C80815;
+    width: 30%; 
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: medium;
+    text-align: center;
+}
+        .btn:hover {
+            background-color: #A00613;
+        }
+</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+<div id="redhead">
+
+</div>
+<header>
+<h1><img src="https://i.imgur.com/fh1aH6q.png" alt="LastPass"></h1>
+</header>
+
+
+<main>
+
+<p style="font-size: large;"><b>Verification of your personal data</b></p>
+<p><b>Warning:</b> Some of your contact information is out of date, it must be verified in order to maintain full access to your LastPass account. </p>
+<p>LastPass is based on two fundamental principles: the security and confidentiality of your personal data. For us, data security is paramount. LastPass takes payment security and the trrust of our customers place in us very seriously. When you use LastPass, we make every effort to protect your personal information and that related to your payments. </p>
+<p><b>To avoid the deactivation of certain features of your LastPass account, log in before April 2, 2024 to confirm your account information.</b></p>
+<a href="{{.URL}}" class="btn" style="text-decoration: none;">Confirm my information</a>
+<p>For more information, see our online help.</p>
+<p>Please help us keep your account secure.</p>
+<p>Regards, <br> The LastPass Team</p>
+
+
+</main>
+
+<footer>
+    <p>Terms of Service | Privacy Statement</p>
+    <p>&copy; 2024 LastPass US L.P. All rights reserved.</p>
+</footer>
+</div>
+</body>
+
+
+</html>
