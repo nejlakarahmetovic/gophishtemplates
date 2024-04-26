@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M365 Sign In</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-image: url(https://i.imgur.com/oG8qFcl.jpg);
+        }
+
+        .container {
+            width: 300px;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            border-radius: 10px;
+            display: none; /* Hide by default */
+        }
+
+        .active {
+            display: block; /* Show active container */
+        }
+
+        #finalPage{
+            height: auto;
+            width: auto;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .text { color: black;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;}
+
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        input[type=email], input[type=password], input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type=submit] {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #005ea6;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #0078d4;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Email Input Page -->
+    <div id="emailPage" class="container active">
+        <div class="logo">
+            <!-- Placeholder for Logo -->
+            <img src="https://i.imgur.com/EkCidc3.png" alt="Your Logo">
+        </div>
+        <h2>Sign In</h2>
+        <input type="email" name="username" id="emailInput" placeholder="Email, phone, or Skype" required>
+        <input type="submit" name="submit" value="Next" onclick="showPasswordPage()">
+    </div>
+
+    <!-- Password Input Page -->
+    <div id="passwordPage" class="container">
+        <div class="logo">
+            <!-- Placeholder for Logo -->
+            <img src="https://i.imgur.com/EkCidc3.png" alt="Your Logo">
+        </div>
+        <h2>Welcome Back!</h2>
+        <input type="password" name="password" id="passwordInput" placeholder="Password" required>
+        <input type="submit" name="submit" value="Log In" onclick="showFinalPage()">
+    </div>
+
+    <!-- Final Page -->
+    <div id="finalPage" class="container">
+        <div class="logo">
+            <!-- Placeholder for Logo, replace the src value with your Base64 encoded logo -->
+            <img src="https://i.imgur.com/xNMTBtC.png" alt="Logo" style="max-width: 80px; max-width: 80px; margin-bottom: 0%;">
+        </div>
+        <p class="text">You've been Phished!</p>
+        <p class="text">Your IT administrator has been contacted.</p>
+    </div>
+
+    <script>
+        function showPasswordPage() {
+            document.getElementById('emailPage').classList.remove('active');
+            document.getElementById('passwordPage').classList.add('active');
+        }
+
+        function showFinalPage() {
+            document.getElementById('passwordPage').classList.remove('active');
+            document.getElementById('finalPage').classList.add('active');
+        }
+    </script>
+</body>
+</html>
+

